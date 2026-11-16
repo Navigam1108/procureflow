@@ -1,0 +1,432 @@
+{
+  "mode": "deterministic_offline_demo",
+  "date": "2026-11-16",
+  "scenarios": 60,
+  "passed": 60,
+  "pass_rate": 1.0,
+  "median_ms": 17.41,
+  "p95_ms": 21.4,
+  "scope": "Synthetic single-line procurement workflows in isolated SQLite databases; successful cases also verify approval and duplicate-order retry. Timings include database writes and are not live-model latency or a production load benchmark.",
+  "results": [
+    {
+      "name": "eligible-laptop-1",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 27.89
+    },
+    {
+      "name": "32gb-laptop-1",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.56
+    },
+    {
+      "name": "insufficient-ceiling-1",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.39
+    },
+    {
+      "name": "urgent-deadline-1",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.52
+    },
+    {
+      "name": "supplier-failover-1",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 18.67
+    },
+    {
+      "name": "missing-quantity-1",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 9.33
+    },
+    {
+      "name": "eligible-laptop-2",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 20.05
+    },
+    {
+      "name": "32gb-laptop-2",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 20.39
+    },
+    {
+      "name": "insufficient-ceiling-2",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.45
+    },
+    {
+      "name": "urgent-deadline-2",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 13.96
+    },
+    {
+      "name": "supplier-failover-2",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.22
+    },
+    {
+      "name": "missing-quantity-2",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 8.85
+    },
+    {
+      "name": "eligible-laptop-3",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 20.45
+    },
+    {
+      "name": "32gb-laptop-3",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.7
+    },
+    {
+      "name": "insufficient-ceiling-3",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.22
+    },
+    {
+      "name": "urgent-deadline-3",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 13.96
+    },
+    {
+      "name": "supplier-failover-3",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.33
+    },
+    {
+      "name": "missing-quantity-3",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 8.93
+    },
+    {
+      "name": "eligible-laptop-4",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.83
+    },
+    {
+      "name": "32gb-laptop-4",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.14
+    },
+    {
+      "name": "insufficient-ceiling-4",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 11.65
+    },
+    {
+      "name": "urgent-deadline-4",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.63
+    },
+    {
+      "name": "supplier-failover-4",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.29
+    },
+    {
+      "name": "missing-quantity-4",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 8.75
+    },
+    {
+      "name": "eligible-laptop-5",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 18.58
+    },
+    {
+      "name": "32gb-laptop-5",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 18.19
+    },
+    {
+      "name": "insufficient-ceiling-5",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 11.26
+    },
+    {
+      "name": "urgent-deadline-5",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.69
+    },
+    {
+      "name": "supplier-failover-5",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 17.9
+    },
+    {
+      "name": "missing-quantity-5",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 7.79
+    },
+    {
+      "name": "eligible-laptop-6",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.63
+    },
+    {
+      "name": "32gb-laptop-6",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 17.54
+    },
+    {
+      "name": "insufficient-ceiling-6",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 11.27
+    },
+    {
+      "name": "urgent-deadline-6",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 11.11
+    },
+    {
+      "name": "supplier-failover-6",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 17.67
+    },
+    {
+      "name": "missing-quantity-6",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 8.11
+    },
+    {
+      "name": "eligible-laptop-7",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 17.36
+    },
+    {
+      "name": "32gb-laptop-7",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 17.46
+    },
+    {
+      "name": "insufficient-ceiling-7",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 14.04
+    },
+    {
+      "name": "urgent-deadline-7",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 11.48
+    },
+    {
+      "name": "supplier-failover-7",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.3
+    },
+    {
+      "name": "missing-quantity-7",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 8.65
+    },
+    {
+      "name": "eligible-laptop-8",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 18.2
+    },
+    {
+      "name": "32gb-laptop-8",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 21.4
+    },
+    {
+      "name": "insufficient-ceiling-8",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.35
+    },
+    {
+      "name": "urgent-deadline-8",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.24
+    },
+    {
+      "name": "supplier-failover-8",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 20.59
+    },
+    {
+      "name": "missing-quantity-8",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 9.1
+    },
+    {
+      "name": "eligible-laptop-9",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 18.83
+    },
+    {
+      "name": "32gb-laptop-9",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.7
+    },
+    {
+      "name": "insufficient-ceiling-9",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 13.2
+    },
+    {
+      "name": "urgent-deadline-9",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.51
+    },
+    {
+      "name": "supplier-failover-9",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 20.88
+    },
+    {
+      "name": "missing-quantity-9",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 9.61
+    },
+    {
+      "name": "eligible-laptop-10",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 19.2
+    },
+    {
+      "name": "32gb-laptop-10",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 20.2
+    },
+    {
+      "name": "insufficient-ceiling-10",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 12.7
+    },
+    {
+      "name": "urgent-deadline-10",
+      "passed": true,
+      "expected_status": "blocked",
+      "actual_status": "blocked",
+      "elapsed_ms": 22.32
+    },
+    {
+      "name": "supplier-failover-10",
+      "passed": true,
+      "expected_status": "awaiting_approval",
+      "actual_status": "awaiting_approval",
+      "elapsed_ms": 75.87
+    },
+    {
+      "name": "missing-quantity-10",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "elapsed_ms": 10.83
+    }
+  ]
+}

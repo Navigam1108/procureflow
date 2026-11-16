@@ -1,0 +1,28 @@
+# Free backend only. Provision a free Neon Postgres database separately.
+services:
+  - type: web
+    name: procureflow-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: SESSION_HTTPS_ONLY
+        value: "true"
+      - key: AGENT_MODE
+        value: demo
+      - key: DEMO_AUTH
+        value: "true"
+      - key: PROCUREFLOW_ROOT
+        value: /app
+      - key: PYTHONUNBUFFERED
+        value: "1"
