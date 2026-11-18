@@ -57,7 +57,7 @@ def create_app(service=None, seed=True):
 
     app = FastAPI(title='ProcureFlow', version='0.1.0', lifespan=lifespan)
     app.state.service = service
-    app.add_middleware(SessionMiddleware, secret_key=settings.session_secret, same_site='strict', https_only=settings.session_https_only, max_age=28800)
+    app.add_middleware(SessionMiddleware, secret_key=settings.session_secret, same_site=settings.session_same_site, https_only=settings.session_https_only, max_age=28800)
 
     @app.middleware('http')
     async def origin_check(request, call_next):

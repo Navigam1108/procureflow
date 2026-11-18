@@ -3,6 +3,8 @@
 A working procurement agent MVP: describe a purchase, compare compliant suppliers, obtain separate human approval, and create one durable sandbox purchase order.
 All company policies, supplier offers, budgets, and orders are synthetic.
 
+For a single-container Hugging Face deployment, see the [Docker Spaces guide](deploy/spaces/README.md).
+
 ![Shared supplier comparison](docs/screenshots/maya-shared-comparison.jpg)
 
 For a free hosted portfolio demo, see the [Vercel + Render + Neon deployment guide](docs/DEPLOYMENT.md). The repository includes a free Render backend Blueprint, Vercel frontend configuration, and GitHub Actions checks. These files prepare deployment; they do not mean the app is already hosted.

@@ -29,10 +29,15 @@ class Settings:
     approver_token = os.getenv('APPROVER_API_TOKEN', '')
     session_secret = os.getenv('SESSION_SECRET', '')
     session_https_only = os.getenv('SESSION_HTTPS_ONLY', 'false').lower() == 'true'
+    session_same_site = os.getenv('SESSION_SAME_SITE', 'strict').lower()
     allowed_origins = tuple(origin.strip().rstrip('/') for origin in os.getenv('ALLOWED_ORIGINS', 'http://127.0.0.1:3000,http://localhost:3000,http://127.0.0.1:8000,http://localhost:8000').split(',') if origin.strip())
 
 
 settings = Settings()
+if settings.session_same_site not in ('strict', 'lax', 'none'):
+    raise RuntimeError('SESSION_SAME_SITE must be strict, lax, or none')
+if settings.session_same_site == 'none' and not settings.session_https_only:
+    raise RuntimeError('SESSION_SAME_SITE=none requires SESSION_HTTPS_ONLY=true')
 if settings.agent_mode not in ('demo', 'live'):
     raise RuntimeError('AGENT_MODE must be demo or live')
 if not settings.demo_auth:

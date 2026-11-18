@@ -25,3 +25,13 @@ def test_secure_session_cookie_for_https_hosting(service, monkeypatch):
         cookie = response.headers['set-cookie'].lower()
         assert 'secure' in cookie and 'httponly' in cookie and 'samesite=strict' in cookie
         assert client.get('/api/session').json()['user']['role'] == 'approver'
+
+
+def test_embedded_space_can_keep_approver_session(service, monkeypatch):
+    monkeypatch.setattr(settings, 'session_https_only', True)
+    monkeypatch.setattr(settings, 'session_same_site', 'none')
+    with TestClient(create_app(service, seed=False), base_url='https://demo.hf.space') as client:
+        response = client.post('/api/session', json={'persona': 'approver'})
+        cookie = response.headers['set-cookie'].lower()
+        assert 'secure' in cookie and 'httponly' in cookie and 'samesite=none' in cookie
+        assert client.get('/api/session').json()['user']['role'] == 'approver'
