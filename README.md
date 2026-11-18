@@ -1,8 +1,7 @@
 # ProcureFlow
 
 A working procurement agent MVP: describe a purchase, compare compliant suppliers, obtain separate human approval, and create one durable sandbox purchase order.
-
-Built for enterprise AI engineering interviews. It is an independent portfolio project. All company policies, supplier offers, budgets, and orders are synthetic.
+All company policies, supplier offers, budgets, and orders are synthetic.
 
 ![Shared supplier comparison](docs/screenshots/maya-shared-comparison.jpg)
 
@@ -171,9 +170,3 @@ Demo authentication intentionally lets you switch between both synthetic persona
 
 No real orders are transmitted, no payments are made, and no supplier integrations are represented as real. Model calls are bounded; failures remain visible and resumable instead of silently falling back to deterministic output.
 
-## Resume wording after your own review
-
-- Built ProcureFlow, a procurement agent using Python, FastAPI, LangGraph, Groq, PostgreSQL/SQLite, and Next.js, integrating policy lookup, supplier comparison, budget checks, and approval-gated purchase orders through typed tools and MCP.
-- Implemented proposal-bound approvals, persistent workflow recovery, and transactional order idempotency; validated 60 deterministic scenarios plus concurrency, authorization, and failure-recovery tests.
-
-Keep the offline scenario results separate from live-model accuracy claims. The live integration has smoke verification, not a statistically meaningful model benchmark.
