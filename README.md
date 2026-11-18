@@ -3,6 +3,9 @@
 A working procurement agent MVP: describe a purchase, compare compliant suppliers, obtain separate human approval, and create one durable sandbox purchase order.
 All company policies, supplier offers, budgets, and orders are synthetic.
 
+**[Live demo on Hugging Face Spaces](https://huggingface.co/spaces/Navigam/procureflow)**
+The public sandbox uses offline demo mode and may need a moment to wake from sleep.
+
 For a single-container Hugging Face deployment, see the [Docker Spaces guide](deploy/spaces/README.md).
 
 ![Shared supplier comparison](docs/screenshots/maya-shared-comparison.jpg)

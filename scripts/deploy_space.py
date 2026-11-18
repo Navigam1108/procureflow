@@ -9,6 +9,7 @@ from huggingface_hub import CommitOperationAdd, HfApi
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('repo_id', help='Personal Space, e.g. owner/procureflow')
+    parser.add_argument('--hardware', choices=('cpu-basic', 'cpu-upgrade'), default='cpu-basic')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     api = HfApi()
@@ -28,7 +29,13 @@ def main():
     operations.append(CommitOperationAdd(
         path_in_repo='README.md', path_or_fileobj=str(root / 'deploy/spaces/README.md'),
     ))
-    api.create_repo(args.repo_id, repo_type='space', space_sdk='docker', exist_ok=True)
+    api.create_repo(
+        args.repo_id, repo_type='space', space_sdk='docker', exist_ok=True,
+        space_hardware=args.hardware,
+        space_sleep_time=300 if args.hardware == 'cpu-upgrade' else None,
+    )
+    if args.hardware == 'cpu-upgrade':
+        api.set_space_sleep_time(args.repo_id, sleep_time=300)
     commit = api.create_commit(
         args.repo_id, repo_type='space', operations=operations,
         commit_message='Deploy ProcureFlow full-stack procurement demo',
